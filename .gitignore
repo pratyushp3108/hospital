@@ -1,71 +1,21 @@
-# -----------------------------
-# Drupal 10 .gitignore (Clean)
-# -----------------------------
-
-# Ignore vendor dependencies
-/vendor/
-
-# Ignore Drupal core (managed by Composer)
 /web/core/
-/web/vendor/
-
-# Ignore contributed modules/themes (installed via Composer)
 /web/modules/contrib/
 /web/themes/contrib/
 /web/profiles/contrib/
+/vendor/
 
-# Ignore user-generated files
-/web/sites/*/files/
-/web/sites/*/private/
-/web/sites/*/public/
+# Allow custom code
+!/web/modules/custom/
+!/web/themes/custom/
 
-# Ignore sensitive config files
+# Ignore sensitive files
 /web/sites/*/settings.php
-/web/sites/*/settings.local.php
 /web/sites/*/services.yml
 
-# Ignore temporary files
-/web/sites/*/translations/
-/web/sites/*/tmp/
-/web/sites/*/cache/
+# Ignore files directory
+/web/sites/*/files/
 
-# Ignore logs
-*.log
-
-# Ignore OS files
-.DS_Store
-Thumbs.db
-
-# Ignore Composer binaries
-/composer.phar
-
-# Ignore Drush binaries
-/drush.phar
-
-# Ignore IDE/editor files
-.vscode/
-.idea/
-
-# Ignore node modules (if using frontend tools)
-/node_modules/
-
-# -----------------------------
-# IMPORTANT: Track Drupal config
-# -----------------------------
-
-# Allow config directory
+# Allow config
 !config/
 !config/sync/
 !config/sync/*.yml
-
-# -----------------------------
-# Allow important root files
-# -----------------------------
-!/composer.json
-!/composer.lock
-
-# -----------------------------
-# Allow web root essentials
-# -----------------------------
-!/web/.htaccess
-!/web/index.php
