@@ -1,65 +1,71 @@
-# gitignore template for Drupal 8 projects
-#
-# earlier versions of Drupal are tracked in `community/PHP/`
-#
-# follows official upstream conventions:
-# https://www.drupal.org/docs/develop/using-composer
+# -----------------------------
+# Drupal 10 .gitignore (Clean)
+# -----------------------------
 
-# Ignore configuration files that may contain sensitive information
-/web/sites/*/*settings*.php
-/web/sites/*/*services*.yml
+# Ignore vendor dependencies
+/vendor/
 
-# Ignore paths that may contain user-generated content
-/web/sites/*/files
-/web/sites/*/public
-/web/sites/*/private
-/web/sites/*/files-public
-/web/sites/*/files-private
+# Ignore Drupal core (managed by Composer)
+/web/core/
+/web/vendor/
 
-# Ignore paths that may contain temporary files
-/web/sites/*/translations
-/web/sites/*/tmp
-/web/sites/*/cache
+# Ignore contributed modules/themes (installed via Composer)
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
 
-# Ignore drupal core (if not versioning drupal sources)
-/web/vendor
-/web/core
-/web/modules/README.txt
-/web/modules/contrib
-/web/profiles/README.txt
-/web/profiles/contrib
-/web/sites/development.services.yml
-/web/sites/example.settings.local.php
-/web/sites/example.sites.php
-/web/sites/README.txt
-/web/themes/README.txt
-/web/themes/contrib
-/web/.csslintrc
-/web/.editorconfig
-/web/.eslintignore
-/web/.eslintrc.json
-/web/.gitattributes
-/web/.htaccess
-/web/.ht.router.php
-/web/autoload.php
-/web/composer.json
-/web/composer.lock
-/web/example.gitignore
-/web/index.php
-/web/INSTALL.txt
-/web/LICENSE.txt
-/web/README.txt
-/web/robots.txt
-/web/update.php
-/web/web.config
+# Ignore user-generated files
+/web/sites/*/files/
+/web/sites/*/private/
+/web/sites/*/public/
 
-# Ignore vendor dependencies and scripts
-/vendor
+# Ignore sensitive config files
+/web/sites/*/settings.php
+/web/sites/*/settings.local.php
+/web/sites/*/services.yml
+
+# Ignore temporary files
+/web/sites/*/translations/
+/web/sites/*/tmp/
+/web/sites/*/cache/
+
+# Ignore logs
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore Composer binaries
 /composer.phar
-/composer
-/robo.phar
-/robo
+
+# Ignore Drush binaries
 /drush.phar
-/drush
-/drupal.phar
-/drupal
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+
+# Ignore node modules (if using frontend tools)
+/node_modules/
+
+# -----------------------------
+# IMPORTANT: Track Drupal config
+# -----------------------------
+
+# Allow config directory
+!config/
+!config/sync/
+!config/sync/*.yml
+
+# -----------------------------
+# Allow important root files
+# -----------------------------
+!/composer.json
+!/composer.lock
+
+# -----------------------------
+# Allow web root essentials
+# -----------------------------
+!/web/.htaccess
+!/web/index.php
