@@ -1,0 +1,102 @@
+{% include '@pratyush_theme/includes/header.html.twig' %}
+
+<!-- HERO SECTION -->
+<section class="hero text-center text-white d-flex align-items-center">
+  <div class="container">
+    <h1>Grow Your Business with Digital Marketing</h1>
+    <p>SEO • Social Media • Paid Ads • Branding</p>
+    <a href="/contact" class="btn btn-primary btn-lg">Get Free Consultation</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services py-5">
+  <div class="container text-center">
+    <h2>Our Services</h2>
+    <div class="row mt-4">
+
+      <div class="col-md-4">
+        <h4>SEO Optimization</h4>
+        <p>Rank higher on search engines and get organic traffic.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h4>Social Media Marketing</h4>
+        <p>Engage your audience and grow your brand presence.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h4>Google Ads</h4>
+        <p>Targeted campaigns that convert clicks into customers.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about bg-light py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-md-6">
+        <h2>Why Choose Us?</h2>
+        <p>We help businesses grow with data-driven strategies and creative marketing solutions.</p>
+        <ul>
+          <li>✔ Experienced team</li>
+          <li>✔ Proven results</li>
+          <li>✔ Affordable pricing</li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <img src="/themes/custom/pratyush_theme/images/marketing.jpg" class="img-fluid" alt="Marketing">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO / VIEW -->
+<section class="portfolio py-5">
+  <div class="container text-center">
+    <h2>Our Work</h2>
+
+    {{ drupal_view('portfolio', 'block_1') }}
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials bg-dark text-white py-5">
+  <div class="container text-center">
+    <h2>What Clients Say</h2>
+
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <p>"Amazing results in just 3 months!"</p>
+        <strong>- Client A</strong>
+      </div>
+
+      <div class="col-md-4">
+        <p>"Highly professional team."</p>
+        <strong>- Client B</strong>
+      </div>
+
+      <div class="col-md-4">
+        <p>"Our sales doubled!"</p>
+        <strong>- Client C</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta text-center py-5">
+  <div class="container">
+    <h2>Ready to Grow Your Business?</h2>
+    <a href="/contact" class="btn btn-success btn-lg">Contact Us Today</a>
+  </div>
+</section>
+
+{% include '@pratyush_theme/includes/footer.html.twig' %}

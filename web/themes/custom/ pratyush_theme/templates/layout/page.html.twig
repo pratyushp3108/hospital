@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+
+  <body>
+
+    {% include '@pratyush_theme/includes/header.html.twig' %}
+
+    <main class="container">
+      {{ page.content }}
+    </main>
+
+    {% include '@pratyush_theme/includes/footer.html.twig' %}
+
+  </body>
+</html>
