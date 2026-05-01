@@ -1,0 +1,15 @@
+name: Pratyush Theme
+type: theme
+description: Custom Drupal theme with Bootstrap
+core_version_requirement: ^9 || ^10 || ^11
+base theme: bootstrap
+
+libraries:
+  - pratyush_theme/global-styling
+
+regions:
+  header: Header
+  primary_menu: Primary Menu
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
